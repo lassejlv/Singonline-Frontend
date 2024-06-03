@@ -1,0 +1,18 @@
+
+
+@mixin container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@mixin center ($isFullCenter) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    @if $isFullCenter {
+        height: 100vh;
+    }
+}
