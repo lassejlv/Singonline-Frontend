@@ -3,28 +3,24 @@
 @import "utils/reset";
 @import "components/navbar";
 @import "components/button";
+@import "components/card";
 @import "utils/mixins/container";
-
-@mixin DefaultStyles {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    user-select: none;
-}
+@import "pages/songs";
+@import "utils/mixins/default";
 
 * {
-    @include DefaultStyles()
+  @include DefaultStyles();
 }
 
 body {
-    @include container();
-    background-color: $dark;
-    color: $primary_textColor;
+  @include container();
+  background-color: $dark;
+  color: $primary_textColor;
 }
+
 .header {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    @include center(false)
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  @include center(false);
 }
