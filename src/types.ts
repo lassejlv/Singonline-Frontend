@@ -109,7 +109,10 @@ export type Database = {
       };
       Songs: {
         Row: {
-          artist_id: string | null;
+          artist: {
+            id: string;
+            name: string;
+          };
           content: string | null;
           created_at: string;
           id: string;
