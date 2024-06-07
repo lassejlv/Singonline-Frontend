@@ -6,7 +6,7 @@ interface FetchResponse<T> {
   status: number;
   statusText: string;
   error: boolean;
-  data: T | null;
+  data: T;
 }
 
 async function useFetch<T>(url: string, options: RequestInit = {}): Promise<FetchResponse<T>> {
