@@ -58,9 +58,7 @@ const HandleSearch = (e: Event) => {
     return;
   }
 
-  const results = songsArray.filter((song) => {
-    song.title?.toLowerCase().includes(value.replace(" ", "").toLowerCase());
-  });
+  const results = songsArray.filter((song) => song.title?.toLowerCase().includes(value.replace(" ", "").toLowerCase()));
 
   InsertToHtml(results);
 };

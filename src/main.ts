@@ -9,6 +9,10 @@ interface FetchResponse<T> {
   data: T;
 }
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 async function useFetch<T>(url: string, options: RequestInit = {}): Promise<FetchResponse<T>> {
   try {
     const response = await fetch(url, options);
@@ -22,4 +26,4 @@ async function useFetch<T>(url: string, options: RequestInit = {}): Promise<Fetc
     return { status: 500, statusText: error.message, error: true } as FetchResponse<T>;
   }
 }
-export { useFetch };
+export { useFetch, sleep };
